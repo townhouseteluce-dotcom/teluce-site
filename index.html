@@ -576,7 +576,7 @@ button.price-figure:hover img{transform:scale(1.015)}
 .mobile-bar .btn{flex:1;min-height:48px;font-size:14.5px}
 
 /* ---------- pipeline ---------- */
-.pipeline{background:var(--cream-2);border-top:1px solid var(--line);position:relative;overflow:hidden}
+.pipeline{background:radial-gradient(120% 80% at 82% -10%,rgba(212,175,55,.12),rgba(212,175,55,0) 60%),linear-gradient(180deg,#0B0C10,#101218 62%,#0B0C10);border-top:1px solid var(--line);border-bottom:1px solid var(--line);position:relative;overflow:hidden}
 .pipeline::before{content:"";position:absolute;right:-180px;top:-180px;width:520px;height:520px;border-radius:50%;border:1px solid rgba(212,175,55,.14);pointer-events:none}
 .pipe-head{display:flex;align-items:flex-end;justify-content:space-between;gap:24px;flex-wrap:wrap;position:relative}
 .pipe-head .btn{flex:none}
@@ -599,6 +599,7 @@ button.price-figure:hover img{transform:scale(1.015)}
 .pipe-foot .status-cta{display:flex;gap:9px;flex-wrap:wrap}
 .way-note{margin-top:10px;padding:10px 12px;border-left:2px solid var(--gold);background:rgba(212,175,55,.07);font-size:13px !important;line-height:1.7;color:var(--ink-2) !important}
 .way-note b{color:var(--gold-soft)}
+@media (max-width:1240px){.nav a{padding:10px 8px;font-size:13px}.header-actions{gap:6px}}
 @media (max-width:1080px){.pipe-grid{grid-template-columns:1fr 1fr}}
 @media (max-width:640px){.pipe-grid{grid-template-columns:1fr}.pipe-head .btn{width:100%}}
 /* ---------- dark theme form polish ---------- */
