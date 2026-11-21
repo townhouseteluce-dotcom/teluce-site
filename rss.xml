@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>텔루체 매거진 — 용인 생활 · 분양 소식</title>
+    <link>https://teluce.co.kr/magazine/</link>
+    <atom:link href="https://teluce.co.kr/rss.xml" rel="self" type="application/rss+xml"/>
+    <description>용인 처인구 고림동·보평역 생활 정보와 분양 소식을 공식 자료로 확인해 정리합니다. 텔루체 타운하우스.</description>
+    <language>ko-KR</language>
+    <copyright>© 2026 TELUCE</copyright>
+    <lastBuildDate>Sat, 21 Nov 2026 16:00:00 +0900</lastBuildDate>
+    <item>
+      <title>보평3지구 1,705세대 고시 — 용인 고림동 개발 동향 정리</title>
+      <link>https://teluce.co.kr/magazine/bopyeong-3-district/</link>
+      <guid isPermaLink="true">https://teluce.co.kr/magazine/bopyeong-3-district/</guid>
+      <category>분양·개발</category>
+      <pubDate>Sat, 21 Nov 2026 16:00:00 +0900</pubDate>
+      <description>용인시 고시 제2026-235호로 지정된 보평3지구(고림동 522 일원 14만 8,711㎡·1,705세대)와 고림3지구, 보평지구 지구단위계획, SK하이닉스 용인 반도체 클러스터 일정을 공식 고시로 정리했습니다.</description>
+    </item>
+    <item>
+      <title>보평역·고림동 식당 6곳 — 집 보러 온 날 점심 동선</title>
+      <link>https://teluce.co.kr/magazine/bopyeong-gorim-food/</link>
+      <guid isPermaLink="true">https://teluce.co.kr/magazine/bopyeong-gorim-food/</guid>
+      <category>맛집·카페</category>
+      <pubDate>Sat, 21 Nov 2026 16:00:00 +0900</pubDate>
+      <description>텔루체에서 도보 2~28분. 고림동·보평역 주변 국밥·국수·양식·백숙과 카페 6곳의 주소와 영업시간, 도보·차량 이동 시간을 지도 확인 기준으로 정리했습니다.</description>
+    </item>
+    <item>
+      <title>용인 처인구 가볼 만한 곳 5곳 — 고림동에서 차로 20~50분</title>
+      <link>https://teluce.co.kr/magazine/yongin-cheoin-attractions/</link>
+      <guid isPermaLink="true">https://teluce.co.kr/magazine/yongin-cheoin-attractions/</guid>
+      <category>용인 생활</category>
+      <pubDate>Sat, 21 Nov 2026 16:00:00 +0900</pubDate>
+      <description>에버랜드·용인자연휴양림·용인농촌테마파크·한택식물원·대장금파크. 텔루체(고림동)에서 출발한 차량 이동 시간과 운영시간, 주소를 지도 확인 기준으로 정리했습니다.</description>
+    </item>
+  </channel>
+</rss>

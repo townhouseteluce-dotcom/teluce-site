@@ -12,6 +12,7 @@
 <meta name="keywords" content="텔루체, 텔루체 타운하우스, 용인 텔루체, 용인 고림동 타운하우스, 고림동 타운하우스, 용인 타운하우스 분양, TELUCE">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://teluce.co.kr/">
+<link rel="alternate" type="application/rss+xml" title="텔루체 매거진 RSS" href="https://teluce.co.kr/rss.xml">
 <meta name="naver-site-verification" content="5d6aff7ee1b008df26bd48195b0c70d66116231a" />
 <meta name="google-site-verification" content="Yj5bsX9Ekm3zwySNsHCqjgDZX4qoFBhSkTSWzGu1gZM" />
 <meta property="og:url" content="https://teluce.co.kr/">
@@ -242,6 +243,11 @@ h2.title{font-size:clamp(24px,3.4vw,36px);line-height:1.36;font-weight:700;lette
 .ncard .go{margin-top:auto;font-size:12px;color:var(--gold);display:inline-flex;gap:6px;align-items:center;padding-top:6px}
 .ncard .go svg{width:13px;height:13px}
 .news-note{margin-top:16px;font-size:11.5px;color:var(--muted);line-height:1.7}
+.ncard .thumb{margin:-20px -20px 6px;aspect-ratio:16/10;overflow:hidden;background:#0e1015}
+.ncard .thumb img{width:100%;height:100%;object-fit:cover;transition:transform .5s}
+.ncard:hover .thumb img{transform:scale(1.04)}
+.news-more{margin-top:clamp(18px,2.6vw,26px);display:flex;justify-content:center}
+.news-more .btn{min-height:48px}
 @media (max-width:1080px){.direct-grid,.news-grid{grid-template-columns:repeat(2,1fr)}}
 @media (max-width:900px){.direct-grid,.news-grid{grid-template-columns:1fr}.viva{grid-template-columns:1fr}}
 /* ---------- hero controls ---------- */
@@ -754,6 +760,7 @@ button.price-figure:hover img{transform:scale(1.015)}
       <a href="#location">입지</a>
       <a href="#status">분양 현황</a>
       <a href="#pipeline">차기 4개 현장</a>
+      <a href="/magazine/">매거진</a>
       <a href="#booking">방문 예약</a>
     </nav>
     <div class="header-actions">
@@ -770,6 +777,7 @@ button.price-figure:hover img{transform:scale(1.015)}
   <a href="#location">입지 환경 <span>LOCATION</span></a>
   <a href="#status">분양 현황 <span>STATUS</span></a>
   <a href="#pipeline">차기 개발 4개 현장 <span>PIPELINE</span></a>
+  <a href="/magazine/">매거진 <span>MAGAZINE</span></a>
   <a href="#channel">채널 <span>CHANNEL</span></a>
   <a href="#booking">방문 예약 <span>VISIT</span></a>
   <a class="btn btn-gold" href="tel:+821062356914"><svg aria-hidden="true"><use href="#i-phone"/></svg>010-6235-6914 전화 상담</a>
@@ -1371,6 +1379,43 @@ button.price-figure:hover img{transform:scale(1.015)}
   </div>
 </section>
 
+<!-- ============ magazine ============ -->
+<section class="section news" id="magazine">
+  <div class="wrap">
+    <div data-reveal>
+      <span class="eyebrow on-light">Teluce Magazine</span>
+      <h2 class="title">용인 생활 · <span class="thin">분양 소식</span></h2>
+      <p class="lead">주변에 무엇이 있는지, 어떤 계획이 진행 중인지 직접 확인해 기록합니다. 장소·운영시간·개발 일정은 확인한 날짜와 근거를 함께 남깁니다.</p>
+    </div>
+    <div class="news-grid">
+      <a class="ncard" href="/magazine/bopyeong-3-district/" data-reveal>
+        <span class="thumb"><img src="assets/teluce-exterior.jpg" alt="텔루체 타운하우스 외관과 벙커주차장" width="768" height="1083" loading="lazy" decoding="async"></span>
+        <span class="press">분양·개발 <time datetime="2026-11-21">2026.11.21</time></span>
+        <h3>보평3지구 1,705세대 고시 — 용인 고림동 개발 동향 정리</h3>
+        <p>용인시 고시 제2026-235호로 지정된 고림동 522 일원 14만 8,711㎡. 반도체 클러스터 일정과 에버라인 보평역까지 공식 자료로 정리했습니다.</p>
+        <span class="go">읽기 <svg aria-hidden="true"><use href="#i-arrow"/></svg></span>
+      </a>
+      <a class="ncard" href="/magazine/bopyeong-gorim-food/" data-reveal>
+        <span class="thumb"><img src="assets/teluce-kitchen.jpg" alt="텔루체 주방과 아일랜드 식탁" width="900" height="1200" loading="lazy" decoding="async"></span>
+        <span class="press">맛집·카페 <time datetime="2026-11-21">2026.11.21</time></span>
+        <h3>보평역·고림동 식당 6곳 — 집 보러 온 날 점심 동선</h3>
+        <p>텔루체에서 도보 2~28분. 국밥·국수·양식·백숙과 카페까지, 지도에 등록된 위치와 영업시간만 확인해 정리했습니다.</p>
+        <span class="go">읽기 <svg aria-hidden="true"><use href="#i-arrow"/></svg></span>
+      </a>
+      <a class="ncard" href="/magazine/yongin-cheoin-attractions/" data-reveal>
+        <span class="thumb"><img src="assets/teluce-rooftop.jpg" alt="텔루체 루프탑 데크와 텃밭" width="676" height="1200" loading="lazy" decoding="async"></span>
+        <span class="press">용인 생활 <time datetime="2026-11-21">2026.11.21</time></span>
+        <h3>용인 처인구 가볼 만한 곳 5곳 — 고림동에서 차로 20~50분</h3>
+        <p>에버랜드·용인자연휴양림·농촌테마파크·한택식물원·대장금파크. 텔루체에서 출발한 차량 이동 시간과 운영시간을 함께 적었습니다.</p>
+        <span class="go">읽기 <svg aria-hidden="true"><use href="#i-arrow"/></svg></span>
+      </a>
+    </div>
+    <div class="news-more">
+      <a class="btn btn-line btn-sm" href="/magazine/">매거진 전체 보기 <svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+    </div>
+  </div>
+</section>
+
 <!-- ============ channel ============ -->
 <section class="section channel" id="channel">
   <div class="wrap on-dark">
@@ -1632,6 +1677,7 @@ button.price-figure:hover img{transform:scale(1.015)}
             <li><a href="#gallery">갤러리</a></li>
             <li><a href="#location">입지 환경</a></li>
             <li><a href="#status">분양 현황</a></li>
+            <li><a href="/magazine/">매거진</a></li>
             <li><a href="#booking">방문 예약</a></li>
           </ul>
         </div>

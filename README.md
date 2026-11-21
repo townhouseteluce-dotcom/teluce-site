@@ -81,3 +81,33 @@ LD_LIBRARY_PATH=/workspace/.tmp/atklibs/root python3 tools/shoot-teluce.py
 - `teluce/assets/og-teluce.jpg` (1200×630) — 텔루체 외관 실사 + 카피 (로고 없음)
 - 메인은 `assets/og-housering.jpg` (1200×630)
 - 생성 스크립트: 워크스페이스 `notes/og.py`
+
+## 매거진 (`/magazine/`) — 2026-11-21 구축
+
+용인 생활·분양 소식을 담는 정적 매거진입니다. 서버·빌드 없이 `index.html` 파일만으로 동작합니다.
+
+- `/magazine/` — 목록 페이지 (`magazine/index.html`). `CollectionPage` + `BreadcrumbList` JSON-LD
+- `/magazine/yongin-cheoin-attractions/` — 용인 처인구 가볼 만한 곳 5곳(2026.11.21)
+- `/magazine/bopyeong-gorim-food/` — 보평역·고림동 식당 6곳(2026.11.21)
+- `/magazine/bopyeong-3-district/` — 보평3지구 1,705세대 고시·개발 동향(2026.11.21)
+- 공통 스타일: `magazine/assets/magazine.css` (메인과 같은 블랙·샴페인 골드 토큰)
+- OG 이미지: `magazine/assets/og-spots.jpg` · `og-food.jpg` · `og-district.jpg` (1200×630, 현장 사진 크롭)
+- 메인 `index.html`의 `#magazine` 섹션과 헤더·모바일 메뉴·푸터에서 연결됩니다.
+
+### 검색엔진 최적화
+
+- `rss.xml` — 매거진 3편 RSS 2.0 피드 (메인 `<head>`에 `rel="alternate"` 링크)
+- `sitemap.xml` — 메인 + `/magazine/` + 글 3편, `lastmod` 포함
+- `robots.txt` — 전체 허용, Naver Yeti·Googlebot·Bingbot 명시, sitemap 안내
+- 모든 매거진 글: `title`·`description`·`canonical`·`og:`·`twitter:`·`Article` JSON-LD·`BreadcrumbList`
+- 소유확인 메타태그는 메인에만 있으면 됩니다(사이트 단위 확인). 네이버 `5d6aff7e…`, 구글 `Yj5bsX9E…`
+
+### 매일 글 추가 절차 (scheduled-action `📰-텔루체-매거진-매일-발행`)
+
+1. `magazine/{slug}/index.html`을 기존 글 형식으로 복사해 본문·메타·JSON-LD의 날짜·제목·설명을 교체
+2. `/magazine/index.html` 카드 1장 추가(최신 글이 맨 위), 목록 JSON-LD `hasPart` 갱신
+3. `sitemap.xml`에 URL 추가, `rss.xml` 최신 item 추가 및 `lastBuildDate` 갱신
+4. `git add -A && git commit && git push origin main` → GitHub Pages 반영 약 30초~1분
+5. `curl -s -o /dev/null -w '%{http_code}' https://teluce.co.kr/magazine/{slug}/` 로 200 확인
+
+**지켜야 할 규칙**: 확인되지 않은 장소·가격·거리·후기를 쓰지 않는다. 영업시간은 ‘지도 확인 시점’을 명시한다. 연락처는 `010-6235-6914`만, 실명(김경민) 표기는 넣지 않는다. 사업자 정보 푸터는 그대로 유지한다.

@@ -7,4 +7,7 @@ Allow: /
 User-agent: Googlebot
 Allow: /
 
+User-agent: Bingbot
+Allow: /
+
 Sitemap: https://teluce.co.kr/sitemap.xml
