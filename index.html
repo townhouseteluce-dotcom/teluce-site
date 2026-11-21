@@ -649,7 +649,59 @@ button.price-figure:hover img{transform:scale(1.015)}
   .gal-item img{transition:none}
 }
 
+/* ---------- site film ---------- */
+.film{background:linear-gradient(170deg,#0A0B0F,#111319 62%,#171922);color:#fff;border-top:1px solid rgba(229,197,123,.12);border-bottom:1px solid rgba(229,197,123,.12)}
+.film-grid{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:clamp(26px,4.4vw,60px);align-items:center;margin-top:clamp(18px,2.8vw,26px)}
+.film-media{display:flex;justify-content:center}
+.film-frame{position:relative;width:min(100%,336px);padding:9px;border:1px solid rgba(229,197,123,.42);background:rgba(255,255,255,.04);box-shadow:0 34px 64px -34px rgba(0,0,0,.95);cursor:pointer}
+.film-frame::before,.film-frame::after{content:"";position:absolute;width:22px;height:22px;border:1px solid var(--gold);pointer-events:none}
+.film-frame::before{top:-1px;left:-1px;border-right:0;border-bottom:0}
+.film-frame::after{bottom:-1px;right:-1px;border-left:0;border-top:0}
+.film-frame video{display:block;width:100%;height:auto;aspect-ratio:9/16;object-fit:cover;background:#05060A}
+.film-badge{position:absolute;left:50%;bottom:-14px;transform:translateX(-50%);z-index:2;display:inline-flex;align-items:center;gap:6px;white-space:nowrap;padding:6px 12px;background:#0C0E13;border:1px solid var(--line-gold);font-family:var(--ff-serif);font-size:10.5px;letter-spacing:.16em;color:var(--gold-pale)}
+.film-badge svg{width:11px;height:11px;color:var(--gold)}
+.film-state{position:absolute;right:15px;top:15px;z-index:2;width:34px;height:34px;border-radius:50%;display:flex;align-items:center;justify-content:center;background:rgba(6,7,10,.62);border:1px solid rgba(229,197,123,.4);color:#fff;backdrop-filter:blur(4px);-webkit-backdrop-filter:blur(4px);opacity:0;transition:opacity .25s,border-color .2s}
+.film-frame:hover .film-state,.film-frame:focus-within .film-state,.film-frame.is-paused .film-state{opacity:1}
+.film-state:hover{border-color:var(--gold);color:var(--gold-pale)}
+.film-state svg{width:13px;height:13px}
+.film-state .i-play{display:none}
+.film-frame.is-paused .film-state .i-pause{display:none}
+.film-frame.is-paused .film-state .i-play{display:block}
+.film-copy .title{margin-top:2px}
+.film-copy .lead{max-width:52ch}
+.film-points{display:flex;flex-wrap:wrap;gap:7px;margin-top:18px}
+.film-points span{display:inline-flex;align-items:center;gap:7px;padding:7px 11px;border:1px solid rgba(229,197,123,.3);background:rgba(255,255,255,.04);font-size:12px;color:var(--gold-pale);letter-spacing:-.01em}
+.film-points svg{width:12px;height:12px;color:var(--gold);flex:none}
+.film-actions{display:flex;flex-wrap:wrap;gap:9px;margin-top:22px}
+.film-note{margin-top:15px;font-size:11.5px;color:rgba(255,255,255,.46);display:flex;gap:7px;align-items:flex-start;line-height:1.75}
+.film-note svg{width:13px;height:13px;flex:none;margin-top:3px;color:var(--gold)}
+
+/* ---------- garden life ---------- */
+.life{background:var(--cream);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.life-head{display:grid;grid-template-columns:minmax(0,1.12fr) minmax(0,.88fr);gap:clamp(20px,3.4vw,44px);align-items:end}
+.life-news{border:1px solid var(--line-gold);background:linear-gradient(150deg,rgba(212,175,55,.13),rgba(212,175,55,.03) 70%);padding:18px 20px 20px}
+.life-news .ln-tag{display:inline-flex;align-items:center;gap:7px;font-family:var(--ff-serif);font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold)}
+.life-news .ln-tag svg{width:13px;height:13px}
+.life-news .ln-tag time{color:var(--muted);letter-spacing:.08em;font-variant-numeric:tabular-nums}
+.life-news b{display:block;font-size:16px;font-weight:700;letter-spacing:-.025em;line-height:1.5;margin-top:9px;color:var(--ink)}
+.life-news p{font-size:12.5px;line-height:1.8;color:var(--muted);margin-top:7px}
+.life-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(10px,1.4vw,14px);margin-top:clamp(20px,3vw,30px)}
+.life-grid .gal-item.is-hero{grid-column:1/-1}
+.life-grid .gal-item:not(.is-hero) img{aspect-ratio:16/10}
+.life-grid .gal-item.is-hero img{aspect-ratio:16/9}
+.life-note{font-size:12px;color:var(--muted);margin-top:14px;display:flex;gap:7px;align-items:flex-start;line-height:1.75}
+.life-note svg{width:14px;height:14px;flex:none;margin-top:3px;color:var(--gold)}
+
 /* ---------- responsive ---------- */
+@media (max-width:900px){
+  .film-grid{grid-template-columns:1fr;gap:38px}
+  .life-head{grid-template-columns:1fr;align-items:start}
+}
+@media (max-width:640px){
+  .film-frame{width:min(100%,300px)}
+  .life-grid{grid-template-columns:1fr}
+  .life-grid .gal-item.is-hero img{aspect-ratio:16/11}
+}
 @media (max-width:1080px){
   .nav{display:none}
   .burger{display:flex}
@@ -920,6 +972,37 @@ button.price-figure:hover img{transform:scale(1.015)}
   </div>
 </section>
 
+<!-- ============ site film ============ -->
+<section class="section film" id="film" aria-label="텔루체 20초 소개 영상">
+  <div class="wrap">
+    <div class="film-grid">
+      <div class="film-media" data-reveal>
+        <div class="film-frame" id="filmFrame">
+          <video id="siteFilm" src="assets/teluce-20s.mp4" poster="assets/photos/teluce-20s-poster.jpg" width="1080" height="1920" muted loop playsinline preload="metadata" autoplay aria-label="텔루체 단지 20초 소개 영상 — 외관, 벙커주차, 다락, 거실"></video>
+          <button class="film-state" type="button" id="filmToggle" aria-label="영상 일시정지" aria-pressed="false"><svg class="i-pause" aria-hidden="true"><use href="#i-pause"/></svg><svg class="i-play" aria-hidden="true"><use href="#i-play"/></svg></button>
+          <span class="film-badge"><svg aria-hidden="true"><use href="#i-play"/></svg>2026.11 현장 촬영 · 20초</span>
+        </div>
+      </div>
+      <div class="film-copy" data-reveal>
+        <span class="eyebrow">Site Film</span>
+        <h2 class="title">20초로 보는<br><span class="thin">텔루체의 하루</span></h2>
+        <p class="lead">외관에서 벙커주차, 다락과 거실까지. 현장에서 직접 찍어 만든 20초짜리 소개 영상입니다. 긴 설명을 읽기 전에, 집의 표정부터 보세요.</p>
+        <div class="film-points">
+          <span><svg aria-hidden="true"><use href="#i-car"/></svg>벙커 주차 — 차는 지하로</span>
+          <span><svg aria-hidden="true"><use href="#i-sun"/></svg>모델하우스 세대 태양광 6kW</span>
+          <span><svg aria-hidden="true"><use href="#i-layers"/></svg>실사용 45평 · 다락 11평</span>
+          <span><svg aria-hidden="true"><use href="#i-building"/></svg>철근콘크리트 단독형 17세대</span>
+        </div>
+        <div class="film-actions">
+          <a class="btn btn-gold" href="#booking"><svg aria-hidden="true"><use href="#i-calendar"/></svg>방문 예약하기</a>
+          <a class="btn btn-ghost" href="tel:+821062356914"><svg aria-hidden="true"><use href="#i-phone"/></svg>담당 실장 010-6235-6914</a>
+        </div>
+        <p class="film-note"><svg aria-hidden="true"><use href="#i-info"/></svg><span>영상은 소리 없이 반복 재생되고, 화면을 누르면 멈춥니다. 영상 속 <b>010-4825-7879</b>는 하우스링 대표 번호이며, 이 현장 상담은 위 담당 실장 번호로 연결됩니다.</span></p>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- ============ features ============ -->
 <section class="section features" id="features">
   <div class="wrap">
@@ -1108,6 +1191,39 @@ button.price-figure:hover img{transform:scale(1.015)}
       </button>
     </div>
     <p class="gal-note"><svg aria-hidden="true"><use href="#i-info"/></svg>사진은 2026년 11월 텔루체 현장에서 촬영한 실제 세대입니다. 세대별 마감과 가구 배치, 마당·테라스 구성은 다를 수 있습니다.</p>
+  </div>
+</section>
+
+<!-- ============ garden life ============ -->
+<section class="section life" id="life" aria-label="프라이빗 텃밭과 단지 생활">
+  <div class="wrap">
+    <div class="life-head">
+      <div data-reveal>
+        <span class="eyebrow on-light">Garden &amp; Life</span>
+        <h2 class="title">마당이 있는 저녁은<br><span class="thin">저녁거리가 텃밭에서 나옵니다</span></h2>
+        <p class="lead">텔루체는 세대마다 마당과 텃밭이 붙어 있습니다. 계절마다 심고 뽑는 일이 집 앞에서 끝나고, 아이는 흙을 만지며 자랍니다. <b>2026년 11월 21일, 현장 텃밭에서 무와 배추를 수확했습니다.</b></p>
+      </div>
+      <aside class="life-news" data-reveal>
+        <span class="ln-tag"><svg aria-hidden="true"><use href="#i-leaf"/></svg>현장 소식 <time datetime="2026-11-21">2026.11.21</time></span>
+        <b>프라이빗 텃밭 &amp; 단지 라이프 — 오늘 텃밭 무·배추 수확, 방문 고객 나눔 중</b>
+        <p>단지 텃밭에서 자란 무와 배추입니다. 방문하시는 고객님께 필요한 만큼 나눠 드리고 있습니다. 김장철이라 배추가 특히 반가운 시기입니다.</p>
+      </aside>
+    </div>
+    <div class="life-grid" data-reveal>
+      <button class="gal-item is-hero" type="button" data-full="assets/photos/hero-02-sunset.jpg" data-cap="노을 드는 텔루체 단지 — 개별 마당과 잔디정원 (2026년 11월 촬영)" aria-label="노을 드는 단지 마당 사진 크게 보기">
+        <img src="assets/photos/hero-02-sunset.jpg" alt="노을이 드는 텔루체 단지의 잔디 마당과 이웃 세대" width="1600" height="900" loading="lazy" decoding="async">
+        <span class="gal-cap"><b>단지 마당 · 노을</b><span>01</span></span>
+      </button>
+      <button class="gal-item" type="button" data-full="assets/photos/teluce-garden-harvest.jpg" data-cap="텃밭 수확 — 무와 배추 (2026.11.21)" aria-label="텃밭에서 수확한 무와 배추 사진 크게 보기">
+        <img src="assets/photos/teluce-garden-harvest.jpg" alt="텃밭에서 갓 수확한 무와 배추" width="1600" height="900" loading="lazy" decoding="async">
+        <span class="gal-cap"><b>텃밭 수확 · 무와 배추</b><span>02</span></span>
+      </button>
+      <button class="gal-item" type="button" data-full="assets/photos/teluce-garden-radish.jpg" data-cap="갓 뽑은 무 — 흙이 묻은 그대로 (2026.11.21)" aria-label="갓 뽑은 무 사진 크게 보기">
+        <img src="assets/photos/teluce-garden-radish.jpg" alt="텃밭에서 갓 뽑은 무" width="1400" height="788" loading="lazy" decoding="async">
+        <span class="gal-cap"><b>갓 뽑은 무</b><span>03</span></span>
+      </button>
+    </div>
+    <p class="life-note"><svg aria-hidden="true"><use href="#i-info"/></svg><span>사진은 2026년 11월 텔루체 현장에서 촬영했습니다. 텃밭과 마당 구성은 세대마다 다르고, 나눔은 수확이 있는 동안 이어집니다.</span></p>
   </div>
 </section>
 
@@ -1395,14 +1511,14 @@ button.price-figure:hover img{transform:scale(1.015)}
     </div>
     <div class="news-grid">
       <a class="ncard" href="/magazine/gorim-apartment-vs-townhouse/" data-reveal>
-        <span class="thumb"><img src="assets/teluce-exterior.jpg" alt="텔루체 타운하우스 외관과 마당" width="1338" height="754" loading="lazy" decoding="async"></span>
+        <span class="thumb"><img src="assets/photos/hero-02-sunset.jpg" alt="노을 드는 텔루체 타운하우스 단지와 개별 마당" width="1600" height="900" loading="lazy" decoding="async"></span>
         <span class="press">집 고르기 <time datetime="2026-11-21">2026.11.21</time></span>
         <h3>고림동 신축 아파트 84㎡ vs 45평 타운하우스 — 면적·자금·생활 비교</h3>
         <p>전용 25.6평 아파트와 실사용 45평 타운하우스. 분양가·계약금·입주 시기·역 거리를 청약홈 공고와 현장 분양가표로 나란히 놓았습니다.</p>
         <span class="go">읽기 <svg aria-hidden="true"><use href="#i-arrow"/></svg></span>
       </a>
       <a class="ncard" href="/magazine/bopyeong-3-district/" data-reveal>
-        <span class="thumb"><img src="assets/teluce-exterior.jpg" alt="텔루체 타운하우스 외관과 마당" width="1338" height="754" loading="lazy" decoding="async"></span>
+        <span class="thumb"><img src="assets/photos/hero-08-rooftop.jpg" alt="텔루체 루프탑에서 본 고림동 아파트 단지와 조망" width="1600" height="900" loading="lazy" decoding="async"></span>
         <span class="press">분양·개발 <time datetime="2026-11-21">2026.11.21</time></span>
         <h3>보평3지구 1,705세대 고시 — 용인 고림동 개발 동향 정리</h3>
         <p>용인시 고시 제2026-235호로 지정된 고림동 522 일원 14만 8,711㎡. 반도체 클러스터 일정과 에버라인 보평역까지 공식 자료로 정리했습니다.</p>
@@ -1923,6 +2039,51 @@ button.price-figure:hover img{transform:scale(1.015)}
     paintHero();
     scheduleHero();
   }
+
+  /* ---------- site film ---------- */
+  (function(){
+    var vid = document.getElementById('siteFilm');
+    var frame = document.getElementById('filmFrame');
+    if (!vid || !frame) return;
+    var btn = document.getElementById('filmToggle');
+    var reducedFilm = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    var userPaused = reducedFilm;
+    var offscreen = false;
+    function sync(){
+      var p = vid.paused;
+      frame.classList.toggle('is-paused', p);
+      if (btn){
+        btn.setAttribute('aria-label', p ? '영상 재생' : '영상 일시정지');
+        btn.setAttribute('aria-pressed', p ? 'true' : 'false');
+      }
+    }
+    function tryPlay(){
+      if (userPaused || offscreen) return;
+      var pr = vid.play();
+      if (pr && pr.catch) pr.catch(function(){});
+    }
+    function toggle(){
+      if (vid.paused){ userPaused = false; tryPlay(); }
+      else { userPaused = true; vid.pause(); }
+      sync();
+    }
+    frame.addEventListener('click', function(e){
+      if (e.target === btn || (btn && btn.contains(e.target))){ e.stopPropagation(); return; }
+      toggle();
+    });
+    if (btn) btn.addEventListener('click', function(e){ e.stopPropagation(); toggle(); });
+    vid.addEventListener('play', sync);
+    vid.addEventListener('pause', sync);
+    if ('IntersectionObserver' in window){
+      new IntersectionObserver(function(en){
+        offscreen = en[0].intersectionRatio < 0.25;
+        if (offscreen){ vid.pause(); }
+        else { tryPlay(); }
+      }, {threshold:[0, 0.25]}).observe(frame);
+    }
+    if (!reducedFilm) tryPlay();
+    sync();
+  })();
 
   /* ---------- youtube inline player ---------- */
   Array.prototype.forEach.call(document.querySelectorAll('.vid-play'), function(btn){
