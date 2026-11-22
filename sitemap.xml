@@ -8,8 +8,14 @@
   </url>
   <url>
     <loc>https://teluce.co.kr/magazine/</loc>
-    <lastmod>2026-11-22</lastmod>
+    <lastmod>2026-11-23</lastmod>
     <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://teluce.co.kr/magazine/yongin-chip-cluster-2026/</loc>
+    <lastmod>2026-11-23</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
