@@ -12,7 +12,7 @@
 </script>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>텔루체 45평 · 실입주금 3억대부터 | 용인 타운하우스 TELUCE</title>
-<meta name="description" content="대지 100평대 철근콘크리트 3층+다락 · 분양가 6억 5천만 원대~ · 시행사 직영 분양. 용인 고림동 458-9, 신규 모델하우스(구경하는 집) 오픈. 직영 계약 시 비바싱크·냉장고·김치냉장고 무상. 방문 예약 010-6235-6914.">
+<meta name="description" content="대지 100평대 철근콘크리트 3층+다락 · 분양가 6억 5천만 원대~ · 시행사 직영 분양. 임시 부스(분양대행사)가 아닌 직영 모델하우스(용인시 처인구 임원로 114-5, 구경하는 집)로 바로 오세요. 대표 010-4825-7879 · 직영 실장 010-6235-6914.">
 <meta name="theme-color" content="#14213D">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="텔루체 타운하우스 TELUCE">
@@ -294,6 +294,41 @@ h2.title{font-size:clamp(24px,3.4vw,36px);line-height:1.36;font-weight:700;lette
 .hero-strip span{font-size:11px;letter-spacing:.16em;color:var(--gold);font-family:var(--ff-serif);text-transform:uppercase}
 .hero-strip b{font-size:clamp(14px,1.4vw,15.5px);font-weight:600;color:#fff;letter-spacing:-.02em}
 .hero-strip small{font-size:12px;color:rgba(255,255,255,.55);line-height:1.5}
+
+/* ---------- direct model house (시행사 직영 모델하우스) ---------- */
+.dmh-bar{background:linear-gradient(100deg,#C9A331,#EBD494 46%,#C9A331);color:#1A140A;border-bottom:1px solid rgba(212,175,55,.5)}
+.dmh-bar .wrap{display:flex;flex-wrap:wrap;align-items:center;gap:6px 20px;padding:10px clamp(20px,5vw,40px)}
+.dmh-bar b{font-size:13.5px;font-weight:800;letter-spacing:-.02em;display:inline-flex;align-items:center;gap:8px}
+.dmh-bar b svg{width:15px;height:15px;flex:none}
+.dmh-bar .dmh-bar-meta{font-size:12.5px;font-weight:600;color:rgba(26,20,10,.74)}
+.dmh-bar .dmh-bar-tel{margin-left:auto;display:inline-flex;flex-wrap:wrap;gap:6px 14px;font-size:12.5px;font-weight:800}
+.dmh-bar .dmh-bar-tel a{color:#1A140A;border-bottom:1px solid rgba(26,20,10,.42);padding-bottom:1px}
+.dmh-bar .dmh-bar-tel a:hover{border-bottom-color:#1A140A}
+.dmh{background:linear-gradient(180deg,#0A0B0F,#101218 62%,#0B0C10);border-bottom:1px solid var(--line);position:relative;overflow:hidden}
+.dmh::before{content:"";position:absolute;right:-180px;top:-160px;width:520px;height:520px;border-radius:50%;border:1px solid rgba(212,175,55,.14);pointer-events:none}
+.dmh-grid{display:grid;grid-template-columns:minmax(0,.92fr) minmax(0,1.08fr);gap:clamp(26px,4.6vw,60px);align-items:center;position:relative}
+.dmh-figure{position:relative;margin:0;min-width:0}
+.dmh-figure .frame{position:relative;background:var(--card);border:1px solid rgba(229,197,123,.55);padding:clamp(8px,1.2vw,12px);box-shadow:0 30px 60px -34px rgba(0,0,0,.9)}
+.dmh-figure img{display:block;width:100%;height:auto;aspect-ratio:4/5;object-fit:cover}
+.dmh-tag{position:absolute;left:clamp(-2px,.4vw,6px);top:16px;z-index:2;background:var(--gold);color:#1A140A;font-family:var(--ff-serif);font-size:10.5px;font-weight:700;letter-spacing:.18em;padding:8px 12px;box-shadow:0 8px 18px -12px rgba(0,0,0,.9)}
+.dmh-call{position:absolute;left:50%;transform:translateX(-50%);bottom:clamp(24px,3vw,34px);z-index:2;display:inline-flex;align-items:center;gap:8px;background:rgba(8,9,12,.88);border:1px solid var(--gold);color:var(--gold-pale);font-weight:800;font-size:clamp(13px,1.25vw,15px);letter-spacing:-.01em;padding:10px 16px;white-space:nowrap;backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);box-shadow:0 12px 28px -16px rgba(0,0,0,.95)}
+.dmh-call svg{width:15px;height:15px;flex:none;color:var(--gold)}
+.dmh-figcap{display:flex;gap:7px;align-items:flex-start;font-size:12px;color:var(--muted);margin-top:12px;line-height:1.7}
+.dmh-figcap svg{width:14px;height:14px;flex:none;margin-top:3px;color:var(--gold)}
+.dmh-figcap b{color:var(--gold-pale);font-weight:600}
+.dmh-place{margin-top:20px;display:grid;gap:9px;font-size:14px;color:var(--ink-2);line-height:1.65;list-style:none;padding:0}
+.dmh-place li{display:flex;gap:9px;align-items:flex-start}
+.dmh-place b{color:#fff;font-weight:700}
+.dmh-place svg{width:16px;height:16px;flex:none;margin-top:4px;color:var(--gold)}
+.dmh-stop{margin-top:22px;padding:18px 20px 20px;border:1px solid rgba(212,175,55,.42);border-left:3px solid var(--gold);background:rgba(212,175,55,.08)}
+.dmh-stop .k{display:inline-flex;align-items:center;gap:7px;font-family:var(--ff-serif);font-size:10.5px;font-weight:700;letter-spacing:.2em;color:var(--gold-soft);margin-bottom:9px}
+.dmh-stop p{margin:0;font-size:14.5px;line-height:1.82;color:var(--ink-2)}
+.dmh-stop b{color:#fff;font-weight:700}
+.dmh-actions{display:flex;flex-wrap:wrap;gap:9px;margin-top:22px}
+.dmh-tels{margin-top:14px;font-size:13px;line-height:1.75;color:rgba(255,255,255,.68)}
+.dmh-tels b{color:var(--gold-pale);font-weight:700;letter-spacing:.01em}
+@media (max-width:900px){.dmh-grid{grid-template-columns:1fr}.dmh-call{font-size:13px}}
+@media (max-width:640px){.dmh-bar{padding-bottom:2px}.dmh-bar .dmh-bar-tel{margin-left:0}}
 
 /* ---------- intro ---------- */
 .intro{background:var(--cream);border-bottom:1px solid var(--line)}
@@ -850,6 +885,13 @@ button.price-figure:hover img{transform:scale(1.015)}
 </div>
 
 <main id="main">
+<div class="dmh-bar" role="note" aria-label="시행사 직영 모델하우스 안내">
+  <div class="wrap">
+    <b><svg aria-hidden="true"><use href="#i-pin"/></svg>저기(임시 부스) 말고, 여기(직영 모델하우스)로 바로 오세요</b>
+    <span class="dmh-bar-meta">용인시 처인구 임원로 114-5 · 방문 전 직영 확인</span>
+    <span class="dmh-bar-tel"><a href="tel:+821048257879">대표 010-4825-7879</a><a href="tel:+821062356914">직영 실장 010-6235-6914</a></span>
+  </div>
+</div>
 <!-- ============ hero ============ -->
 <section class="hero" id="top" aria-label="텔루체 현장 하이라이트">
   <div class="hero-top">
@@ -947,6 +989,42 @@ button.price-figure:hover img{transform:scale(1.015)}
         <li><span>Price</span><b>6억 5천만 원대~</b><small>실입주금 3억 원대~ · 조건 상담</small></li>
       </ul>
     </div>
+</section>
+
+<!-- ============ direct model house ============ -->
+<section class="section dmh" id="modelhouse" aria-label="시행사 직영 모델하우스 안내">
+  <div class="wrap">
+    <div class="dmh-grid">
+      <figure class="dmh-figure" data-reveal>
+        <span class="dmh-tag">직영 모델하우스</span>
+        <div class="frame">
+          <img src="assets/photos/direct-model-house.jpg" alt="용인 고림동 텔루체 시행사 직영 모델하우스 — ‘구경하는 집’ 현수막과 114-5 벙커 주차장 입구" width="960" height="1200" loading="eager" decoding="async">
+          <span class="dmh-call"><svg aria-hidden="true"><use href="#i-phone"/></svg>직영 실장님 ☎ 010-6235-6914</span>
+        </div>
+        <figcaption class="dmh-figcap"><svg aria-hidden="true"><use href="#i-pin"/></svg><span>용인시 처인구 임원로 114-5 · <b>‘구경하는 집’</b> 현수막이 걸린 집이 직영 모델하우스입니다. 건물 아래 벙커 주차장에 차로 바로 들어오세요.</span></figcaption>
+      </figure>
+      <div data-reveal>
+        <span class="eyebrow on-light">Direct model house</span>
+        <h2 class="title">저기(임시 부스) 말고<br><span class="thin">여기(직영 모델하우스)로 바로 오세요</span></h2>
+        <p class="lead">현장 앞에 세워 놓은 <b>임시 부스(분양대행사)</b>가 아니라, 시행사가 직접 운영하는 <b>직영 모델하우스</b>입니다. 한 단계 거치지 말고 <b>임원로 114-5 직영 모델하우스</b>로 바로 오시면 조건과 잔여 세대, 공정 상황을 현장에서 그대로 확인하실 수 있습니다.</p>
+        <ul class="dmh-place">
+          <li><svg aria-hidden="true"><use href="#i-pin"/></svg><span>주소 — <b>용인시 처인구 임원로 114-5</b> (텔루체 직영 모델하우스 · 구경하는 집)</span></li>
+          <li><svg aria-hidden="true"><use href="#i-phone"/></svg><span>방문 전 직영 확인 — <b>대표 010-4825-7879</b> · <b>직영 실장 010-6235-6914</b></span></li>
+          <li><svg aria-hidden="true"><use href="#i-car"/></svg><span>주차 — 건물 아래 <b>벙커 주차장</b>에 그대로 세우시면 됩니다.</span></li>
+        </ul>
+        <div class="dmh-stop">
+          <span class="k">ONE-STOP 입주 관리</span>
+          <p>매매로 끝이 아닙니다. 지금도 이미 입주하신 <b>2호 고객님</b>과 마당에서 함께 어울리며 부족한 부분을 직접 채워드리는 <b>원스톱(One-stop) 직영 입주 관리</b>를 이어갑니다.</p>
+        </div>
+        <div class="dmh-actions">
+          <a class="btn btn-gold" href="tel:+821062356914"><svg aria-hidden="true"><use href="#i-phone"/></svg>직영 실장 010-6235-6914</a>
+          <a class="btn btn-line" href="tel:+821048257879"><svg aria-hidden="true"><use href="#i-phone"/></svg>대표 010-4825-7879</a>
+          <a class="btn btn-ghost" href="#booking"><svg aria-hidden="true"><use href="#i-calendar"/></svg>방문 예약</a>
+        </div>
+        <p class="dmh-tels">어느 번호로 전화하셔도 직영 모델하우스로 안내해 드립니다 — <b>대표 010-4825-7879</b> · <b>직영 실장 010-6235-6914</b></p>
+      </div>
+    </div>
+  </div>
 </section>
 
 <!-- ============ about ============ -->
